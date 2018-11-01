@@ -1,0 +1,50 @@
+<hr>
+<div class="container" id="carrito">
+  <div class="row d-flex justify-content-around align-items-center">
+    <img src="../../../assets/logo.png" class="d-block img-fluid">
+    <h4 class="display-4">Cotización</h4>
+  </div>
+  <table class="table table-hover table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Articulo</th>
+        <th scope="col"># Unidades</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Sub total</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let list of lista">
+      <tr>
+        <td>{{list.nombre}}</td>
+        <td>{{list.unidades}}</td>
+        <td>${{list.precioUnitario | number}}</td>
+        <td>${{list.sub_total | number}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="row">
+    <div class="col-md-12">
+        <div class="alert alert-primary text-center" role="alert">
+          El total de tu cotización es ${{total | number}} pesos colombianos 
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mt-1">
+      <img class="mx-auto d-block" (click)="eliminar()" data-toggle="tooltip" data-placement="top" title="Eliminar cotización" src="../../../assets/recycle-bin.png" alt="">
+    </div>
+    <div class="col-md-6 mt-1">
+      <div class="row">
+          <div class="col-md-10">
+              <input id="correo" type="email" class="form-control form-control-sm" [(ngModel)]="correo" type="text" placeholder="Ingresa correo de destino" required>
+          </div>
+        <div class="col-md-2">
+            <img class="mx-auto d-block correoImg" (click)="enviarCorreo()" data-toggle="tooltip" data-placement="top" title="Enviar cotización a correo electrónico" src="../../../assets/contact.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>
+<hr>

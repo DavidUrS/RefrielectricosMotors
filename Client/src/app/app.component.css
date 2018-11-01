@@ -1,0 +1,11 @@
+body{
+  font-family: 'Bree Serif', serif;
+  height: 100vh;
+}
+.telefono{
+  padding: 1px;
+}
+.btn-sm{
+  margin-top:-3vh;
+  border-radius: 0px;
+}

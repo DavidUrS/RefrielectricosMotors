@@ -1,0 +1,39 @@
+<app-header></app-header>
+<!-- Button trigger modal -->
+<button type="button" style="margin-top: 14vh; background-color: #2A587F; border-radius: 0px; color: white;" class="btn ml-auto fixed-top" data-toggle="modal" data-target="#exampleModal">
+    Recibir llamada
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Te llamaremos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form (ngSubmit)="makeCall()" #formStudent>
+                <div class="form-group">
+                    <textarea cols="6" rows="1" class="form-control" placeholder="Numero de telefono" [(ngModel)]="callModel.phone" #id="ngModel" [ngModelOptions]="{standalone: true}"></textarea>
+                    <textarea cols="6" rows="1" class="mt-1 form-control" placeholder="Nombres" [(ngModel)]="callModel.name" #id="ngModel" [ngModelOptions]="{standalone: true}"></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning">Recibir llamada</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar.</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="fixed-bottom float-right">
+    <small class="font-weight-bold text-warning">Escribenos</small>
+    <br>
+    <label class="font-weight-bold"><img src="./../assets/whatsapp.png"> 3008132438</label>
+</div>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+

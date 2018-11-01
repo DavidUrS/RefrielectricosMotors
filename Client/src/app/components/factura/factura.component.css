@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+*{
+    font-family: 'Kanit', sans-serif;
+  }
+  
+#carrito{
+    margin-top: 11vh;
+}
+.correoImg:hover{
+    cursor: pointer;
+    cursor: hand;
+    font-weight: bold;
+}

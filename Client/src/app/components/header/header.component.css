@@ -1,0 +1,15 @@
+.dropdown-item:hover{
+  color:white;
+  background: #428bca;
+}
+#refri{
+  color:white;
+}
+#refri:hover{
+  text-decoration: none;
+}
+@media(max-width:1000px){
+  #carrito{
+    position: fixed;
+  }
+}

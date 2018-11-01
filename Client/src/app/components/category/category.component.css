@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+.unidades{
+  width: 50%;
+}
+.card-footer{
+  justify-content:space-between;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  flex-wrap: wrap;
+}
+#foot{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items:center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 1%;
+}
+
+*{
+  font-family: 'Kanit', sans-serif;
+}
+
+#zoom:hover{
+  margin-top: 5vh;
+  transform: scale(1.4);
+}
+
+#head{
+  margin-top: 11vh;
+}
+
+.carrito:hover{
+  cursor: pointer;
+  cursor: hand;
+}
+
+.filter:hover{
+  cursor: pointer;
+  cursor: hand;
+  font-weight: bold;
+}
+.filter{
+  font-size: 15px;
+  color:black;
+}
+@media(max-width:720px){
+  .card-body{
+    padding: 1px;
+  }
+}
