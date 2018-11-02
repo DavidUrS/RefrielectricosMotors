@@ -1,0 +1,9 @@
+.fondo{
+    background-image: url('../../../assets/fondos/almacen2.jpeg');
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.interna{
+    background-color: rgba(255, 255, 255, 0.4);
+}
