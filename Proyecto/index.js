@@ -2,20 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const app = express();
-const mongoose = require('mongoose');
 const morgan = require('morgan')
 const productsRoutes = require('./routes/routesProducts');
 const callRoutes = require('./routes/routesCall');
-
-
-// Database
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://admin:11111111David@ds215961.mlab.com:15961/refrielectricos',{
-}).then(()=>{
-    console.log("Conectado a la base de datos");
-}).catch((err)=>{
-    console.log("Error al conectarse a la base de datos");
-});
 
 // Settings
 app.set('port',process.env.PORT || 3000);

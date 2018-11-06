@@ -1,16 +1,14 @@
 const router = require('express').Router();
-const faker = require('faker');
-const Product = require('../models/products');
 const nodemailer = require('nodemailer');
-const EmailTemplate = require('email-templates').EmailTemplate;
-const path = require('path');
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
+const dbConnection = require('../config/db');
+const connection = dbConnection();
 
 router.get('/', (req, res) => {
-    Product.find( {}, { category: 1, name:1, cover:1, price:1 },(err,categories)=>{
-        res.json(categories);
-    });
+    connection.query('SELECT * from products', function (error, results, fields) {
+        if (error) throw error;
+        console.log(results)
+        res.json(results)
+      });
 });
 
 
