@@ -15,6 +15,7 @@ export class CategoryComponent implements OnInit {
   factura = new Factura();
   categ: string;
   url: string;
+  name: string;
   categ_filter: string;
   num_articulos: number;
   edit_num_articulos: number;
@@ -68,9 +69,10 @@ export class CategoryComponent implements OnInit {
     
   }
 
-  ShowMore(cate, cover) {
+  ShowMore(cate, cover, name) {
     this.categ = cate;
     this.url = cover;
+    this.name = name
   }
   
 

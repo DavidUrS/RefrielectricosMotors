@@ -62,7 +62,7 @@
                     <b class="card-title font-weight-bold">{{cate.name}}</b>
                     <i class="text-secondary d-none d-md-block">{{cate.category}}</i>
 
-                  <a href="#" (click)="ShowMore(cate.cover,cate.category)"
+                  <a href="#" (click)="ShowMore(cate.cover,cate.category, cate.name)"
                     data-toggle="modal" data-target="#exampleModal">
                     <img src="../../../assets/productos/{{cate.cover}}.jpeg" alt="" class="card-img-top w-100 h-100" data-toggle="tooltip" data-placement="top" title="Ver más">
                   </a>
@@ -82,16 +82,15 @@
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title font-weight-bold" id="exampleModalLabel">{{url}}</h5>
+                          <h5 class="modal-title font-weight-bold" id="exampleModalLabel">{{name}}</h5>
+                          <hr>
+                          <small>{{url}}</small>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
                           <img id="zoom" src="../../../assets/productos/{{categ}}.jpeg" class="card-img-top w-100 h-100">
-                          <p class="text-justify">
-                            AQUI LA DESCRIPCIÓn
-                          </p>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>

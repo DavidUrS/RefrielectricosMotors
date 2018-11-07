@@ -12,3 +12,7 @@
     cursor: hand;
     font-weight: bold;
 }
+#eliminar:hover{
+    cursor: pointer;
+    cursor: hand;
+}

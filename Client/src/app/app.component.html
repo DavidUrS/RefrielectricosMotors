@@ -1,11 +1,11 @@
 <app-header></app-header>
 <!-- Button trigger modal -->
-<button type="button" style="margin-top: 14vh; background-color: #2A587F; border-radius: 0px; color: white;" class="btn ml-auto fixed-top" data-toggle="modal" data-target="#exampleModal">
+<button type="button" style="margin-top: 14vh; background-color: #2A587F; border-radius: 0px; color: white;" class="btn ml-auto fixed-top" data-toggle="modal" data-target="#callModal">
     Recibir llamada
   </button>
   
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="callModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -22,6 +22,7 @@
                 </div>
                 <button type="submit" class="btn btn-warning">Recibir llamada</button>
             </form>
+            <small class="text-uppercase text-body font-weight-bold text-center mx-auto" id="respuesta"></small>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar.</button>

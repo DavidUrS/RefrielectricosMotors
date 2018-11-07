@@ -16,13 +16,17 @@ export class AppComponent {
       phone : this.callModel.phone,
       name: this.callModel.name
     }
-    this.callService.addCall(newCall).subscribe(res=>{
-      console.log(res)
+    this.callService.addCall(newCall).subscribe((res:any)=>{
+      document.getElementById("respuesta").textContent = res+" "+newCall.name+", al número "+newCall.phone;
+      setTimeout(function(){
+        document.getElementById("respuesta").textContent = '';
+      }, 5000);
     })
-    console.log(newCall);
     this.callModel.phone = '';
     this.callModel.name = '';
   }
+
+  
 }
 
 
