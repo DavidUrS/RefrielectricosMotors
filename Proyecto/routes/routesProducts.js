@@ -6,7 +6,6 @@ const connection = dbConnection();
 router.get('/', (req, res) => {
     connection.query('SELECT * from products', function (error, results, fields) {
         if (error) throw error;
-        console.log(results)
         res.json(results)
       });
 });

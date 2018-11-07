@@ -17,14 +17,24 @@ app.use(express.urlencoded({extended:true}));
 
 // Static files
 app.use(express.static(path.join(__dirname,'dist')));
-// app.get('*',function(req,res){
-//     res.sendFile(path.join(__dirname + '/dist/index.html'))
-// })
+
+//Redireccionando por las diferentes rutas
+app.get('/category',(req,res)=>{
+    res.sendFile(path.join(__dirname + '/dist/index.html'))
+})
+app.get('/about',(req,res)=>{
+    res.sendFile(path.join(__dirname + '/dist/index.html'))
+})
+app.get('/services',(req,res)=>{
+    res.sendFile(path.join(__dirname + '/dist/index.html'))
+})
+app.get('/factura',(req,res)=>{
+    res.sendFile(path.join(__dirname + '/dist/index.html'))
+})
+
 // Routes
 app.use('/products',productsRoutes);
 app.use('/call', callRoutes);
-
-
 
 // Start server
 app.listen(app.get('port'),()=>{
